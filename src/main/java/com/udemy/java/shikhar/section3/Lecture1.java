@@ -20,5 +20,7 @@ public class Lecture1 {
         // double value ends in d
         double myNewdoublevalue=14.5d;
         int myintvalue=14;
+        //challenge to the video
+        float castingfloat=(float)(5.25);
     }
 }
