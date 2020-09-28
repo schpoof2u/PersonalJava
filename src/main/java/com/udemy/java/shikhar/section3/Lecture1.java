@@ -3,6 +3,13 @@ package com.udemy.java.shikhar.section3;
 public class Lecture1 {
     public static void main(String[] args)
     {
+        //shows the the least amount of data int can store
+        int Myminintvalue=Integer.MIN_VALUE;
+        //shows the max amount of data int can store
+        int Mymaxintvalue=Integer.MAX_VALUE;
+        System.out.println("the min value for an integer to contain is "+ Myminintvalue);
+        System.out.println("the max value for an integer to contain is "+ Mymaxintvalue);
+
         //shows the least amount of data byte can store
         byte Myminbyte=Byte.MIN_VALUE;
         //shows the max amount of data byte can store
@@ -25,5 +32,13 @@ public class Lecture1 {
         System.out.println("the max amount of data Short can store is "+Mymaxlong);
         long mylong=12l;
         System.out.println("mylong equals "+mylong+" and the value ends in a lowercase l");
+
+        //Casting
+        //Casting the 2 in the expression to datatype
+        int mynewintvalue=( Myminintvalue/2);
+        byte mynewbytevalue=((byte)(Myminbyte/2));
+        short mynewshortvalue=((short)(Myminshort/2));
+        long mynewlongvalue=((long)(Myminlong/2));
+
     }
 }
