@@ -1,13 +1,20 @@
 package com.udemy.java.shikhar.section3;
 
+/**
+ * @author Shikhar Verma
+ *
+ */
 public class Lecture1 {
     public static void main(String[] args)
     {
-        //challenge of lecture 3.12
-        float kiloconversion=0.45359237f;
-        int numlb=128;
-        float lb_to_kilo= numlb*kiloconversion;
-        System.out.println(numlb+" pounds will be converted to kilos");
-        System.out.println(numlb+" pounds"+" equals to "+lb_to_kilo+" kilos");
+        //this is a unicode value(international language code) that will print small a in hindi
+        char mychar='\u0905';
+        System.out.println(mychar);
+        boolean mybool=true;
+        //the percent symbol or %(mod) prints the remainder of division
+        System.out.println(11%2);
+        System.out.println("is 2+2 really 4?");
+        System.out.println(mybool);
+
     }
 }
