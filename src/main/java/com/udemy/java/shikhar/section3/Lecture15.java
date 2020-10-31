@@ -2,6 +2,7 @@ package com.udemy.java.shikhar.section3;
 
 public class Lecture15 {
     public static void main(String[]args){
+        //learning about java basic operators
         // addition operator or +
         // + does addition
         int myresult=12+8; // 12+6=18

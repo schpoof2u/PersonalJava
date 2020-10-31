@@ -2,6 +2,7 @@ package com.udemy.java.shikhar.section3;
 
 public class Lecture9 {
     public static void main(String[]args){
+        //learning about casting lecture 8 is a prerequisite for lecture 9
         //shows the the least amount of data int can store
         int Myminintvalue=Integer.MIN_VALUE;
         //shows the max amount of data int can store

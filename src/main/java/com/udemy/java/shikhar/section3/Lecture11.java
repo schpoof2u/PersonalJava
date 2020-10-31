@@ -2,6 +2,7 @@ package com.udemy.java.shikhar.section3;
 
 public class Lecture11 {
     public static void main(String[]args){
+        //seeing the limits of the float and double datatype
         //E means to the power of or the ^
         //the range of data a float can store
         float myminfloat=Float.MIN_VALUE;

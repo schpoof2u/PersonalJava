@@ -2,6 +2,7 @@ package com.udemy.java.shikhar.section3;
 
 public class Lecture6 {
     public static void main(String[]args){
+       //seeing what int can do in mathematics and in writing
         int Myfirstnumber=(10+5)+(2*10);
         int Mysecondnumber=12;
         int Mythirdnumber=Myfirstnumber*2;

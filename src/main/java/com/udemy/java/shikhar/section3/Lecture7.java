@@ -2,6 +2,7 @@ package com.udemy.java.shikhar.section3;
 
 public class Lecture7 {
     public static void main(String[]args){
+        //seeing the limits of the int datatype
         //shows the the least amount of data int can store
         int MinIntValue=Integer.MIN_VALUE;
         //shows the max amount of data int can store

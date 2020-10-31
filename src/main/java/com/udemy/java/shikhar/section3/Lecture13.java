@@ -7,6 +7,7 @@ public class Lecture13 {
          *
          */
 
+        //larning about the char and boolean datatype
         //this is a unicode value(international language code) that will print small a in hindi
         char mychar='\u0905';
         System.out.println(mychar);

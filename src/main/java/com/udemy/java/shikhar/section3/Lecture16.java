@@ -2,6 +2,7 @@ package com.udemy.java.shikhar.section3;
 
 public class Lecture16 {
     public static void main(String[]args){
+        //learning about java shortcut operators
         byte mycurrentage=14;
         System.out.println("my age in 2020 is "+mycurrentage);
         // ++ means adding 1 to the value and reassgining it currentage can be written as currentage=currentage+1 or currentage++

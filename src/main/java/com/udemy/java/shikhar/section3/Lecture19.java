@@ -2,6 +2,7 @@ package com.udemy.java.shikhar.section3;
 
 public class Lecture19 {
     public static void main(String[]args){
+        //learning about inequalities and logical AND operator
         int topScore=100;
         //<= means less than or equal too, => greater than or equal to
         if(topScore<=100) {

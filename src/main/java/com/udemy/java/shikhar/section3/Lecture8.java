@@ -2,6 +2,7 @@ package com.udemy.java.shikhar.section3;
 
 public class Lecture8 {
     public static void main(String[]args){
+        //seeing the limits of the byte,short,and Long datatype
         //shows the least amount of data byte can store
         byte Myminbyte=Byte.MIN_VALUE;
         //shows the max amount of data byte can store
