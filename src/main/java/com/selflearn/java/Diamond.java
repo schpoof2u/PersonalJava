@@ -1,8 +1,8 @@
 package com.selflearn.java;
 
-public class Triangle {
+public class Diamond {
     public static void main(String[] args) {
-        // the number sequence telling how many '*' are needed to to build the triangle
+        // the number sequence telling how many '*' are needed to to build the first half of the diamond
         int[] startNumberSequence=new int[]{1, 2, 3, 5};
         // what dictates the position of the star,whitespace
         //print the whitespace/whitespaces then the stars
@@ -26,6 +26,17 @@ public class Triangle {
             System.out.println();
 
         }
+        // made new number sequences to show the bottom of the diamond
+        int[] endNumberSequence = new int[]{3,2,1};// how many asterisks need to be printed as show by Number Sequence
+        int[] endNumOfWhitespace= new int[]{2,3,5};// how many spaces need to be printed as shown by Number Sequence
+        for (int i = 0; i < endNumberSequence.length; i++) {//same as top
+            for (int j = 1; j <= endNumberSequence[i]; j++) {//same as top
+                for(int w=1;w<=endNumOfWhitespace[i]; w++){//same as top
+                    System.out.print(space);
+                }
+                System.out.print(asterisk);
+            }
+            System.out.println();
+        }
     }
 }
-
