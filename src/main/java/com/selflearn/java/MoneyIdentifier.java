@@ -35,7 +35,6 @@ public class MoneyIdentifier {
             System.out.println("Code length check complete");
         } else {// money code is not valid
             System.out.println("Code length check failed");
-            truebill = false;
         }
 
         String mcodeSubstring = moneyCode.substring(0, 3);
@@ -44,7 +43,7 @@ public class MoneyIdentifier {
         char thirdCodeChar = mcodeSubstring.charAt(2);
         if (firstCodeChar == secondCodeChar || firstCodeChar == thirdCodeChar || secondCodeChar == firstCodeChar || secondCodeChar == thirdCodeChar) {// .equals() is the == operator but for strings.
             System.out.println("ABC check failed");
-            truebill = false;
+            System.out.println("Bill is invalid, ignore the remaining test results");
 
         } else {
             System.out.println("ABC check complete");
@@ -75,6 +74,7 @@ public class MoneyIdentifier {
 
         } else {
             System.out.println("year test failed");
+                System.out.println("Bill is invalid, ignore the remaining test results");
         }
         //ABC52019X
         //ABC102019X
@@ -132,6 +132,8 @@ public class MoneyIdentifier {
             lastCharCheck = moneyCode.substring(11);
         } else {
             System.out.println("Last char test failed");
+            System.out.println("Bill is invalid, ignore the remaining test results");
+
         }
         String dollarValue;
         int[] billType1 = {1, 5};
@@ -144,18 +146,21 @@ public class MoneyIdentifier {
             if (Integer.parseInt(dollarValue) == billType1[0] || Integer.parseInt(dollarValue) == billType1[1]) {
                 System.out.println("bill type test complete");
                 billValue = Integer.parseInt(moneyCode.substring(7, 8));
+                System.out.println( " The Value of Code "+moneyCode+" is "+billValue);
             }
         } else if (moneyCode.length() == 10) {
             dollarValue = moneyCode.substring(7, 9);
             if (Integer.parseInt(dollarValue) == billType2[0] || Integer.parseInt(dollarValue) == billType2[1] || Integer.parseInt(dollarValue) == billType2[2]) {
                 System.out.println("bill type test complete");
                 billValue = Integer.parseInt(moneyCode.substring(7, 9));
+                System.out.println( " The Value of Code "+moneyCode+" is "+billValue);
             }
         } else if (moneyCode.length() == 11) {
             dollarValue = moneyCode.substring(7, 10);
             if (Integer.parseInt(dollarValue) == billType3[0] || Integer.parseInt(dollarValue) == billType3[1]) {
                 System.out.println(" bill type test complete");
                 billValue = Integer.parseInt(moneyCode.substring(7, 10));
+                System.out.println( " The Value of Code "+moneyCode+" is "+billValue);
             }
 
         } else if (moneyCode.length() == 12) {
@@ -163,11 +168,15 @@ public class MoneyIdentifier {
             if (Integer.parseInt(dollarValue) == billType4) {
                 System.out.println(" bill type test complete");
                 billValue = Integer.parseInt(moneyCode.substring(7, 11));
+                System.out.println( " The Value of Code "+moneyCode+" is "+billValue);
             }
-        } else {
-            System.out.println("Dollar value test failed");
         }
+        else {
+            System.out.println("Dollar value test failed");
+            System.out.println("Bill is invalid, ignore the remaining test results");
 
-
+        }
+        System.out.println();
+        return billValue;
     }
 }
