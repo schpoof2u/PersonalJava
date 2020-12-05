@@ -13,9 +13,8 @@ public class Lecture5 {
         calculateHighScorePosition(790);
     }
     public static int calculateScore(boolean gameOver,int score,int levelCompleted,int bonus){
-
-        if(gameOver==true){
-            int finalScore=score+(levelCompleted*bonus);
+        int finalScore=score+(levelCompleted*bonus);
+        if(gameOver){
             return finalScore;//return is what tells the method to stop running
         }
         else{
@@ -33,15 +32,13 @@ public class Lecture5 {
         if(playerScore>=1000){
             return 1;
         }
-        else if(playerScore>=500&&playerScore<=1000){
+        else if(playerScore>=500){//removed the and operator/condition because intellij said it was always true no matter the input
             return 2;
         }
-        else if(playerScore>=100&&playerScore<=500){
+        else if(playerScore>=100){//removed the and operator/condition because intellij said it was always true no matter the input
             return 3;
         }
-        else{
-            return 4;
-        }
+            return 4; // removed the else statement because it doesn't need to be their if no other if statements or code is being run
     }
 
 }

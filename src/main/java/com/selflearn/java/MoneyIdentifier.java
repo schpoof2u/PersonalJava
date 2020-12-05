@@ -146,29 +146,29 @@ public class MoneyIdentifier {
             if (Integer.parseInt(dollarValue) == billType1[0] || Integer.parseInt(dollarValue) == billType1[1]) {
                 System.out.println("bill type test complete");
                 billValue = Integer.parseInt(moneyCode.substring(7, 8));
-                System.out.println( " The Value of Code "+moneyCode+" is "+billValue);
+                System.out.println( "The Value of Code "+moneyCode+" is "+billValue);
             }
         } else if (moneyCode.length() == 10) {
             dollarValue = moneyCode.substring(7, 9);
             if (Integer.parseInt(dollarValue) == billType2[0] || Integer.parseInt(dollarValue) == billType2[1] || Integer.parseInt(dollarValue) == billType2[2]) {
                 System.out.println("bill type test complete");
                 billValue = Integer.parseInt(moneyCode.substring(7, 9));
-                System.out.println( " The Value of Code "+moneyCode+" is "+billValue);
+                System.out.println( "The Value of Code "+moneyCode+" is "+billValue);
             }
         } else if (moneyCode.length() == 11) {
             dollarValue = moneyCode.substring(7, 10);
             if (Integer.parseInt(dollarValue) == billType3[0] || Integer.parseInt(dollarValue) == billType3[1]) {
-                System.out.println(" bill type test complete");
+                System.out.println("bill type test complete");
                 billValue = Integer.parseInt(moneyCode.substring(7, 10));
-                System.out.println( " The Value of Code "+moneyCode+" is "+billValue);
+                System.out.println( "The Value of Code "+moneyCode+" is "+billValue);
             }
 
         } else if (moneyCode.length() == 12) {
             dollarValue = moneyCode.substring(7, 11);
             if (Integer.parseInt(dollarValue) == billType4) {
-                System.out.println(" bill type test complete");
+                System.out.println("bill type test complete");
                 billValue = Integer.parseInt(moneyCode.substring(7, 11));
-                System.out.println( " The Value of Code "+moneyCode+" is "+billValue);
+                System.out.println( "The Value of Code "+moneyCode+" is "+billValue);
             }
         }
         else {
