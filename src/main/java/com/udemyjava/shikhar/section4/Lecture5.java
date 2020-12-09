@@ -28,17 +28,19 @@ public class Lecture5 {
         String finalMessage=playerName+"\n Managed to get into position"+"\n Position is "+position;
         System.out.println(finalMessage);
     }
-    public static int calculateHighScorePosition( int playerScore){
-        if(playerScore>=1000){
+    public static int calculateHighScorePosition( int playerScore) {
+        if (playerScore >= 1000) {
             return 1;
-        }
-        else if(playerScore>=500){//removed the and operator/condition because intellij said it was always true no matter the input
+        } else if (playerScore >= 500) {//removed the and operator/condition because intellij said it was always true no matter the input
             return 2;
         }
-        else if(playerScore>=100){//removed the and operator/condition because intellij said it was always true no matter the input
+        else if (playerScore >= 100) {//removed the and operator/condition because intellij said it was always true no matter the input
             return 3;
         }
-            return 4; // removed the else statement because it doesn't need to be their if no other if statements or code is being run
+        else{
+            return 4;
+        }
+
     }
 
 }
