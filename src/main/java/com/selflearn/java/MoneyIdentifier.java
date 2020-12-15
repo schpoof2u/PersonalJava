@@ -1,11 +1,13 @@
 package com.selflearn.java;
 public class MoneyIdentifier {
     public static void main(String[] args) {
-        int money = MoneyIdentifer("XXZ200950B");
-        money += MoneyIdentifer("XYZ2009500G");
-        money += MoneyIdentifer("XYZ180010B");
-        money += MoneyIdentifer("XYZ2021100B");
-        money += MoneyIdentifer("XYZ20095009");
+//        int money = MoneyIdentifer("XXZ200950B");
+//        money += MoneyIdentifer("XYZ2009500G");
+//        money += MoneyIdentifer("XYZ180010B");
+//        money += MoneyIdentifer("XYZ2021100B");
+//        money += MoneyIdentifer("XYZ20095009");
+        MoneyIdentifer("XYZ20095009");
+        MoneyIdentifer("ABC200250X");
     }
 
     public static int MoneyIdentifer(String moneyCode) {
@@ -27,113 +29,98 @@ public class MoneyIdentifier {
         String fake = "fake";
         String real = "real";
         System.out.println("Bill code being tested for validation is " + moneyCode);
-        //the length of the money code can only be 9,10,11
-        // might use substring
-        // might use equals
-
+        // Code length check
         if (moneyCode.length() >= 9 && moneyCode.length() <= 12) {//checks the length of the  money code and runs it through parameters to see if the code is valid
             System.out.println("Code length check complete");
         } else {// money code is not valid
-            System.out.println("Code length check failed");
+            System.out.println("Bill is invalid");
+            System.out.println();
+            return 0;
         }
 
         String mcodeSubstring = moneyCode.substring(0, 3);
         char firstCodeChar = mcodeSubstring.charAt(0);
         char secondCodeChar = mcodeSubstring.charAt(1);
         char thirdCodeChar = mcodeSubstring.charAt(2);
+        // ABC check
         if (firstCodeChar == secondCodeChar || firstCodeChar == thirdCodeChar || secondCodeChar == firstCodeChar || secondCodeChar == thirdCodeChar) {// .equals() is the == operator but for strings.
-            System.out.println("ABC check failed");
-            System.out.println("Bill is invalid, ignore the remaining test results");
-
+            System.out.println("Bill is invalid");
+            System.out.println();
+            return 0;
         } else {
             System.out.println("ABC check complete");
         }
 
         //ABC52019X
         String yearValue;
+        // year test
         if (moneyCode.length() == 9) {
             yearValue = moneyCode.substring(3, 7);
-            if (Integer.parseInt(yearValue) <= 2020 && Integer.parseInt(yearValue) >= 1990) {
+            if (Integer.parseInt(yearValue) <= 2020&&Integer.parseInt(yearValue) >= 1990) {
                 System.out.println("Year test passed");
             }
         } else if (moneyCode.length() == 10) {
-            yearValue = moneyCode.substring(3, 8);
-            if (Integer.parseInt(yearValue) <= 2020 && Integer.parseInt(yearValue) >= 1990) {
+            yearValue = moneyCode.substring(3, 7);
+            if (Integer.parseInt(yearValue) <= 2020&&Integer.parseInt(yearValue) >= 1990) {
                 System.out.println("Year test passed");
             }
         } else if (moneyCode.length() == 11) {
-            yearValue = moneyCode.substring(3, 9);
-            if (Integer.parseInt(yearValue) <= 2020 && Integer.parseInt(yearValue) >= 1990) {
+            yearValue = moneyCode.substring(3, 7);
+            if (Integer.parseInt(yearValue) <= 2020&&Integer.parseInt(yearValue) >= 1990) {
                 System.out.println("Year test passed");
             }
         } else if (moneyCode.length() == 12) {
-            yearValue = moneyCode.substring(3, 10);
-            if (Integer.parseInt(yearValue) <= 2020 && Integer.parseInt(yearValue) >= 1990) {
+            yearValue = moneyCode.substring(3, 7);
+            if (Integer.parseInt(yearValue) <= 2020&&Integer.parseInt(yearValue) >= 1990) {
                 System.out.println("Year test passed");
             }
-
         } else {
-            System.out.println("year test failed");
-                System.out.println("Bill is invalid, ignore the remaining test results");
+            System.out.println("Bill is invalid");
+            System.out.println();
+            return 0;
         }
         //ABC52019X
         //ABC102019X
         //ABC1002019X
-        String lastCharCheck;
-        boolean firstPass = false;
-        boolean secondPass = false;
-        boolean thirdPass = false;
-        boolean fourthPass = false;
+
+        // last char check
         String[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
         if (moneyCode.length() == 9) {
-            lastCharCheck = moneyCode.substring(8);
+             String lastCharCheck = moneyCode.substring(8);
             for (int i = 0; i < alphabet.length; i++) {
-                if (firstPass == false) {
-                    if (lastCharCheck.equals(alphabet[i])) {
-                        System.out.println("Last char test complete");
-                        firstPass = true;
-                        break;
-                    }
+                if (lastCharCheck.equals(alphabet[i])) {
+                    System.out.println("Last char test complete");
+                    break;
                 }
             }
         } else if (moneyCode.length() == 10) {
-            lastCharCheck = moneyCode.substring(9);
+           String lastCharCheck = moneyCode.substring(9);
             for (int i = 0; i < alphabet.length; i++) {
-                if (secondPass == false) {
                     if (lastCharCheck.equals(alphabet[i])) {
                         System.out.println("Last char test complete");
-                        secondPass = true;
                         break;
                     }
-                }
             }
         } else if (moneyCode.length() == 11) {
-            lastCharCheck = moneyCode.substring(10);
+            String lastCharCheck = moneyCode.substring(10);
             for (int x = 0; x < alphabet.length; x++) {
-                if (thirdPass == false) {
                     if (lastCharCheck.equals(alphabet[x])) {
                         System.out.println("Last char test complete");
-                        thirdPass = true;
                         break;
                     }
-                }
             }
         } else if (moneyCode.length() == 12) {
-            lastCharCheck = moneyCode.substring(11);
+             String lastCharCheck = moneyCode.substring(11);
             for (int w = 0; w < alphabet.length; w++) {
-                if (fourthPass == false) {
                     if (lastCharCheck.equals(alphabet[w])) {
                         System.out.println("Last char test complete");
-                        fourthPass = true;
                         break;
                     }
                 }
             }
-            lastCharCheck = moneyCode.substring(11);
-        } else {
-            System.out.println("Last char test failed");
-            System.out.println("Bill is invalid, ignore the remaining test results");
-
+        else {
+            System.out.println("Bill is invalid");
+            return 0;
         }
         String dollarValue;
         int[] billType1 = {1, 5};
@@ -141,6 +128,7 @@ public class MoneyIdentifier {
         int[] billType3 = {100, 500};
         int billType4 = 1000;
         // 1,5,10,20,50 does not work
+       // bill type test
         if (moneyCode.length() == 9) {// to give value of thee bill you print the value of it right then and now.
             dollarValue = moneyCode.substring(7, 8);
             if (Integer.parseInt(dollarValue) == billType1[0] || Integer.parseInt(dollarValue) == billType1[1]) {
@@ -172,11 +160,11 @@ public class MoneyIdentifier {
             }
         }
         else {
-            System.out.println("Dollar value test failed");
-            System.out.println("Bill is invalid, ignore the remaining test results");
-
+            System.out.println("Bill is invalid");
+            System.out.println();
+            return 0;
         }
         System.out.println();
-        return billValue;
+        return 1;
     }
 }

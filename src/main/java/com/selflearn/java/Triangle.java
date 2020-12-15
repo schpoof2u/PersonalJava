@@ -15,7 +15,7 @@ public class Triangle {
         for (int i = 0; i < startNumberSequence.length; i++) {//tells when to stop by telling it the size of the array
             for (int j = 1; j <= startNumberSequence[i]; j++) {// prints the asterisks and spaces by comparing j to the value of array using i and if a condition is not met to the fullest capability then it will keep on printing.
                 // the spaces are going to be looped
-                // the incrementation will decrease
+            // the incrementation will decrease
                 // the number of spaces must be greater than the amount of i
                 for (int w = 1; w <= startNumOfWhitespace[i]; w++) {// prints the spaces by comparing j to the value of array using i and if a condition is not met to the fullest capability then it will keep on printing.
                     System.out.print(space);
