@@ -8,6 +8,7 @@
             MoneyIdentifer("XYZ20095009");
             MoneyIdentifer("XYZ20095009");
             MoneyIdentifer("ABC200250X");
+            MoneyIdentifer("ADK20031000x");
         }
 
         public static int MoneyIdentifer(String moneyCode) {
@@ -17,6 +18,7 @@
             int billValue = 0;
             boolean truebill = true;
             System.out.println("Bill code being tested for validation is " + moneyCode);
+            System.out.println(moneyCode.length());
             // Code length check
             if (moneyCode.length() >= 9 && moneyCode.length() <= 12) {//checks the length of the  money code and runs it through parameters to see if the code is valid
                 System.out.println("Code length check complete");
@@ -43,29 +45,42 @@
             String yearValue;
             // year test
             if (moneyCode.length() == 9) {
-                yearValue = moneyCode.substring(3,7);
-                if (Integer.parseInt(yearValue) <= 1990 && Integer.parseInt(yearValue) >= 2020) {
+                yearValue = moneyCode.substring(3,6);
+                if (Integer.parseInt(yearValue) >= 1990 && Integer.parseInt(yearValue) <= 2020) {
                     System.out.println("Year test passed");
+                } else {
+                    System.out.println("Bill is invalid");
+                    System.out.println();
+                    return 0;
                 }
             } else if (moneyCode.length() == 10) {
-                yearValue = moneyCode.substring(3,8);
-                if (Integer.parseInt(yearValue) <= 1990 && Integer.parseInt(yearValue) >= 2020) {
+                yearValue = moneyCode.substring(3,7);
+                if (Integer.parseInt(yearValue) >= 1990 && Integer.parseInt(yearValue) <= 2020) {
                     System.out.println("Year test passed");
+                }else {
+                    System.out.println("Bill is invalid");
+                    System.out.println();
+                    return 0;
                 }
+
             } else if (moneyCode.length() == 11) {
-                yearValue = moneyCode.substring(3,9);
-                if (Integer.parseInt(yearValue) <= 1990 && Integer.parseInt(yearValue) >= 2020) {
+                yearValue = moneyCode.substring(3,7);
+                if (Integer.parseInt(yearValue) >= 1990 && Integer.parseInt(yearValue) <= 2020) {
                     System.out.println("Year test passed");
+                } else {
+                    System.out.println("Bill is invalid");
+                    System.out.println();
+                    return 0;
                 }
             } else if (moneyCode.length() == 12) {
-                yearValue = moneyCode.substring(3,10);
-                if (Integer.parseInt(yearValue) <= 1990 && Integer.parseInt(yearValue) >= 2020) {
+                yearValue = moneyCode.substring(3,7);
+                if (Integer.parseInt(yearValue) >= 1990 && Integer.parseInt(yearValue) <= 2020) {
                     System.out.println("Year test passed");
+                } else {
+                    System.out.println("Bill is invalid");
+                    System.out.println();
+                    return 0;
                 }
-            } else {
-                System.out.println("Bill is invalid");
-                System.out.println();
-                return 0;
             }
             // last char check
             String[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
