@@ -6,7 +6,6 @@
             MoneyIdentifer("XYZ180010B");
             MoneyIdentifer("XYZ2021100B");
             MoneyIdentifer("XYZ20095009");
-            MoneyIdentifer("XYZ20095009");
             MoneyIdentifer("ABC200250X");
             MoneyIdentifer("ADK20031000x");
         }
