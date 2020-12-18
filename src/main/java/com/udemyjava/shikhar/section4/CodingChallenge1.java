@@ -50,7 +50,7 @@ public class CodingChallenge1 {
     //NOTE: 1 mile per hour is 1.609 kilometers per hour
     //NOTE: Do not add a main method to the solution code.
     public static void main(String[]args){
-        printConversion(-1);
+        printConversion(95.75);
     }
     public static long toMilesPerHour(double kilometersPerHour){
         if(kilometersPerHour<0){
@@ -58,8 +58,8 @@ public class CodingChallenge1 {
             return -1;
         }
         else{
-            long milesPerHour=Math.round(kilometersPerHour*1.609);
-            System.out.println(kilometersPerHour+"km/h ="+milesPerHour+"mi/h");
+            long milesPerHour=Math.round(kilometersPerHour*0.62137119);
+            System.out.println(kilometersPerHour+" km/h = "+milesPerHour+" mi/h");
             return milesPerHour;
         }
     }
