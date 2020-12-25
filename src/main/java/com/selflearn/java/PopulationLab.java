@@ -15,8 +15,20 @@ public class PopulationLab {
     //Continue for 20 years.
     public static void main(String[]args){
         System.out.println("This a program I wrote to help me do my Population lab for science");
+        System.out.println();
+        calcPopulation();
     }
     public static void calcPopulation(){
-        int beanNum=100;
+        double beanNum=5;
+        for(int i=1; i<=20; i++){
+            double birth=(beanNum*0.2)*2;
+            double death=beanNum*0.2;
+            double populationGrowth=birth-death;
+            beanNum+=populationGrowth;
+            System.out.println("Year "+i+" has "+Math.round(birth)+" births"+" and "+Math.round(death)+" deaths");
+            System.out.println("Year "+i+" has a population growth of  "+Math.round(populationGrowth));
+            System.out.println("Year "+i+" has a population of "+Math.round(beanNum)+" beans");
+            System.out.println();
+        }
     }
 }
