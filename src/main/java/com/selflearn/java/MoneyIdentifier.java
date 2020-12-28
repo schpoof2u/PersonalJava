@@ -1,6 +1,7 @@
     package com.selflearn.java;
     public class MoneyIdentifier {
         public static void main(String[] args) {
+            // input for method to work
             MoneyIdentifer("XXZ200950B");
             MoneyIdentifer("XYZ2009500G");
             MoneyIdentifer("XYZ180010B");
@@ -10,14 +11,8 @@
             MoneyIdentifer("ADK20031000x");
         }
 
-        public static int MoneyIdentifer(String moneyCode) {
-            String startingChars = "ABC";
-            int moneyInput = 5;
-            int moneyYear = 2019;
-            int billValue = 0;
-            boolean truebill = true;
+        public static int MoneyIdentifer(String moneyCode) {// moneyCode is the input/parameter given by the user, who has access to the code.
             System.out.println("Bill code being tested for validation is " + moneyCode);
-            System.out.println(moneyCode.length());
             // Code length check
             if (moneyCode.length() >= 9 && moneyCode.length() <= 12) {//checks the length of the  money code and runs it through parameters to see if the code is valid
                 System.out.println("Code length check complete");
@@ -40,7 +35,6 @@
                 System.out.println("ABC check complete");
             }
 
-            //ABC52019X
             String yearValue;
             // year test
             if (moneyCode.length() == 9) {
@@ -155,6 +149,7 @@
                 return 0;
             }
             String dollarValue;
+            int billValue;
             int[] billType1 = {1, 5};
             int[] billType2 = {10, 20, 50};
             int[] billType3 = {100, 500};
