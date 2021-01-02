@@ -1,6 +1,6 @@
 package com.udemyjava.shikhar.section4;
 
-public class CodingChallenge3 {
+public class CodingExercise3 {
     //challenge directions:
     //We have a dog that likes to bark.  We need to wake up if the dog is barking at night!
     //Write a method shouldWakeUp that has 2 parameters.

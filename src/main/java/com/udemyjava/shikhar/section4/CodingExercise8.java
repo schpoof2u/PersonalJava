@@ -1,6 +1,6 @@
 package com.udemyjava.shikhar.section4;
 
-public class CodingChallenge8 {
+public class CodingExercise8 {
     //Challenge directions:
     //Write a method named area with one double parameter named radius.
     //The method needs to return a double value that represents the area of a circle.
@@ -20,8 +20,8 @@ public class CodingChallenge8 {
     //NOTE: All methods need to be defined as public static like we have been doing so far in the course.
     //NOTE: Do not add a main method to your solution code!
     public static void main(String[]args){
-    area(-0.01);
-    area(0,-1);
+        area(-0.01);
+        area(0,-1);
     }
     public static double area(double radius){
         if(radius>=0 || (radius<1 && radius>0)){

@@ -1,6 +1,6 @@
 package com.udemyjava.shikhar.section4;
 
-public class CodingChallenge4 {
+public class CodingExercise4 {
     // challenge directions:
     //Write a method isLeapYear with a parameter of type int named year.
     //The parameter needs to be greater than or equal to 1 and less than or equal to 9999.
@@ -48,8 +48,8 @@ public class CodingChallenge4 {
             else{
                 System.out.println(year+" is not a leap year");
                 return false;
+            }
         }
-    }
         else{
             System.out.println(year+" is not a leap year");
             return false;

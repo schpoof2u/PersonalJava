@@ -1,6 +1,6 @@
 package com.udemyjava.shikhar.section4;
 
-public class CodingChallenge10 {
+public class CodingExercise10 {
     //challenge directions:
     //Write a method printEqual with 3 parameters of type int. The method should not return anything (void).
     //If one of the parameters is less than 0, print text "Invalid Value".
@@ -18,7 +18,7 @@ public class CodingChallenge10 {
     //* The method printEqual needs to be defined as public static like we have been doing so far in the course.
     //* Do not add main method to solution code.
     public static void main(String[]args){
-    printEqual(2,2,2);
+        printEqual(2,2,2);
     }
     public static void printEqual(int number1,int number2,int number3){
         if(number1<0 || number2<0 || number3<0){

@@ -1,6 +1,6 @@
 package com.udemyjava.shikhar.section4;
 
-public class CodingChallenge7 {
+public class CodingExercise7 {
     //challenge directions:
     //We'll say that a number is "teen" if it is in the range 13 -19 (inclusive).
     //Write a method named hasTeen with 3 parameters of type int.
@@ -17,8 +17,8 @@ public class CodingChallenge7 {
     //NOTE: All methods need to be defined as public static like we have been doing so far in the course.
     //NOTE: Do not add a  main method to solution code.
     public static void main(String[]args){
-    hasTeen(21,34,16);
-    isTeen(12);
+        hasTeen(21,34,16);
+        isTeen(12);
     }
     public static boolean hasTeen(int age1, int age2, int age3){
         if((age1>=13 && age1<=19) || (age2>=13 && age2<=19) || (age3>=13 && age3<=19) ){

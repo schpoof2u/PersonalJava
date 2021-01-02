@@ -1,7 +1,7 @@
 package com.udemyjava.shikhar.section4;
 
-public class CodingChallenge2 {
- // Challenge Directions:
+public class CodingExercise2 {
+    // Challenge Directions:
     //Write a method called printMegaBytesAndKiloBytes that has 1 parameter of type int with the name kiloBytes.
     //The method should not return anything (void) and it needs to calculate the megabytes and remaining kilobytes from the kilobytes parameter.
     //Then it needs to print a message in the format "XX KB = YY MB and ZZ KB".
@@ -19,9 +19,10 @@ public class CodingChallenge2 {
     //TIP: 1 MB = 1024 KB
     //NOTE: Do not set kilobytes parameter value inside your method.
     //NOTE: The solution will not be accepted if there are extra spaces.
-    //NOTE: The printMegaBytesAndKiloBytes method  needs to be defined as public static like we have been doing so far in the course.NOTE: Do not add a  main method to solution code.
+    //NOTE: The printMegaBytesAndKiloBytes method  needs to be defined as public static like we have been doing so far in the course.
+    // NOTE: Do not add a  main method to solution code.
     public static void main(String[]args){
-    printMegaBytesAndKiloBytes(100000);
+        printMegaBytesAndKiloBytes(100000);
     }
     public static void printMegaBytesAndKiloBytes( int kiloBytes){
         if(kiloBytes<0){

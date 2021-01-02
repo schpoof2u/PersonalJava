@@ -1,6 +1,6 @@
 package com.udemyjava.shikhar.section4;
 
-public class CodingChallenge6 {
+public class CodingExercise6 {
     //challenge directions:
     //Write a method hasEqualSum with 3 parameters of type int.
     //The method should return boolean and it needs to return true if the sum of the first and second parameter is equal to the third parameter. Otherwise, return false.
@@ -11,7 +11,7 @@ public class CodingChallenge6 {
     //NOTE: The hasEqualSum method  needs to be defined as public static like we have been doing so far in the course.
     //NOTE: Do not add a  main method to solution code.
     public static void main(String[]args){
-    hasEqualSum(2,1,4);
+        hasEqualSum(2,1,4);
     }
     public static boolean hasEqualSum( int numero1, int numero2, int sum){
         if(numero1+numero2==sum){
