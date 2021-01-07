@@ -1,4 +1,4 @@
-package com.udemyjava.shikhar.section4;
+package com.udemy.java.shikhar.section4;
 
 public class Lecture1 {
     public static void main(String[]args){
