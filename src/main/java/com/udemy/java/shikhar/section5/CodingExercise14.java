@@ -37,17 +37,16 @@ public class CodingExercise14 {
         }
     }
     public static int sumOdd(int start, int end){
-        if((start<0 || end<0) || (end>start)){
+        int oddSum=0;
+        if((start<0 || end<0) || (end<start)){
             return -1;
         }
         else{
-            int oddSum=0;
             for(int i=start;i<=end;i++){
                 if(isOdd(i)==true){
                     oddSum+=i;
                 }
             }
-            System.out.println(oddSum);
             return oddSum;
         }
     }
