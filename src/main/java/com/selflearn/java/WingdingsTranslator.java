@@ -3,7 +3,6 @@ package com.selflearn.java;
 public class WingdingsTranslator {
     public static void main(String[] args) {
         //Wingdings("I own a husky, and his name is Simba");
-        Wingdings("✌👌👍👎☜☝☞☞☞", false);
         //System.out.println("Mo nkey".substring(2,3));
         //System.out.println("☟♏●●□❍⍓■♋❍♏ ♓⬧\uD83D\uDCA7♒♓\uD83D\uDE75♒♋❒".length());
     }
@@ -20,16 +19,17 @@ public class WingdingsTranslator {
                     }
                 }
             }
-        } else {
-            //TO DO List:
-            // make the the wingdings char array and find the ascii code of those that too long in literal character
-            //else find another way
-            System.out.println("phrase length is " + phrase.length());//phrase length is wrong for wingdings, should be five but is seventeen
-            for (int i = 0; i < wingdings.length; i++) {
-                if (phrase.charAt(0) == wingdings) {
-                    System.out.print(wingdings[i]);
-                }
-            }
+//        } else {
+//            //TO DO List:
+//            // make the the wingdings char array and find the ascii code of those that too long in literal character
+//            //else find another way
+            // NOTE: Java will display a longer substring when using emojis but it will be wrongfully placed, so getting a substring is nearly impossible for my beginner mind
+//            System.out.println("phrase length is " + phrase.length());//phrase length is wrong for wingdings, should be five but is seventeen
+//            for (int i = 0; i < wingdings.length; i++) {
+//                if (phrase.substring(9,10).equals(wingdings[i])) {
+//                    System.out.print(english[i]);
+//                }
+//            }
         }
         return phrase;
     }
