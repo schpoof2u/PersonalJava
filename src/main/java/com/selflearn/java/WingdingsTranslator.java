@@ -29,6 +29,11 @@ public class WingdingsTranslator {
             String wingdings =("✌👌👍👎☜☞☝☟✋☺😐☹💣☠⚐🏱✈☼💧❄🕆✞🕈✠✡☪📪📬🖴❀❝☯☸🕿✆📭✿🖬🖃📫♉🖂🕮♈🕭👓✁@✏❞♊📂📄🗏🗐🗄⌛🖮🖰🖲📁♋♌♍♎♏♐♑♒♓🙰🙵●❍■□◻❑❒⬧⧫◆❖⬥⌧⍓⌘✂✍🖫✇🖳");
             char[] phraseArray=phrase.toCharArray();
             char[] wingdingsArray=wingdings.toCharArray();
+            //for loop to check which symbols have two unicode's and will manually override them
+            String[] newWingdings = {"✌", "👌", "👍", "👎", "☜", "☞", "☝", "☟", "✋", "☺", "😐", "☹", "💣", "☠", "⚐", "🏱", "✈", "☼", "💧", "❄", "🕆", "✞", "🕈", "✠", "✡", "☪", "📪", "📬", "🖴", "❀", "❝", "☯", "☸", "🕿", "✆", "📭", "✿", "🖬", "🖃", "📫", "♉", "🖂", "🕮", "♈", "🕭", "👓", "✁", "@", "✏", "❞", "♊", "📂", "📄", "🗏", "🗐", "🗄", "⌛", "🖮", "🖰", "🖲", "📁", "♋", "♌", "♍", "♎", "♏", "♐", "♑", "♒", "♓", "🙰", "🙵", "●", "❍", "■", "□", "◻", "❑", "❒", "⬧", "⧫", "◆", "❖", "⬥", "⌧", "⍓", "⌘", "✂", "✍", "🖫", "✇", "🖳"};
+            for(int x=0;x<newWingdings.length;x++){
+                System.out.println(newWingdings[x]+" has "+newWingdings[x].length()+" characters");
+            }
 //            for (int i = 0; i < wingdings.length; i++) {
 //                System.out.println(wingdings[i] + "length is " + wingdings[i].length());
 //            }
@@ -36,19 +41,19 @@ public class WingdingsTranslator {
 //            // make the the wingdings char array and find the ascii code of those that too long in literal character
 //            //else find another way
             // NOTE: Java will display a longer substring when using emojis but it will be wrongfully placed, so getting a substring is nearly impossible for my beginner mind
-            System.out.println("phrase length is " + phrase.length());//phrase length is wrong for wingdings, should be five but is seventeen
-            for(int r=0;r<phraseArray.length;r++){
-                int limit=0;
-                for (int i = 0; i < wingdingsArray.length; i++) {
-                    if(phraseArray[r]==wingdingsArray[i]){
-                        System.out.print(english[i]);
-                        limit++;
-                        if(limit==phrase.length()){
-                            break;
-                        }
-                    }
-                }
-            }
+//            System.out.println("phrase length is " + phrase.length());//phrase length is wrong for wingdings, should be five but is seventeen
+//            for(int r=0;r<phraseArray.length;r++){
+//                int limit=0;
+//                for (int i = 0; i < wingdingsArray.length; i++) {
+//                    if(phraseArray[r]==wingdingsArray[i]){
+//                        System.out.print(english[i]);
+//                        limit++;
+//                        if(limit==phrase.length()){
+//                            break;
+//                        }
+//                    }
+//                }
+//            }
         }
         return phrase;
     }
