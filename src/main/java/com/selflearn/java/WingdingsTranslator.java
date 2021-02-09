@@ -12,20 +12,23 @@ public class WingdingsTranslator {
         //System.out.println(s.toCharArray());
         //System.out.println("\uD83D\uDC4C");
         Wingdings("✌\uD83D\uDC4C\uD83D\uDC4D\uD83D\uDC4E",false);
-        System.out.println();
-        Wingdings("✌\uD83D\uDC4C\uD83D\uDC4D",false);
-        System.out.println();
-        Wingdings("✌\uD83D\uDC4C",false);
-        System.out.println();
-        Wingdings("✌",false);
-        System.out.println();
-        Wingdings("✌",false);
-        System.out.println();
-        Wingdings("\uD83D\uDC4C",false);
-        System.out.println();
-        Wingdings("\uD83D\uDC4D",false);
-        System.out.println();
-        Wingdings("\uD83D\uDC4E",false);
+//        System.out.println();
+//        Wingdings("✌\uD83D\uDC4C\uD83D\uDC4D",false);
+//        System.out.println();
+//        Wingdings("✌\uD83D\uDC4C",false);
+//        System.out.println();
+//        Wingdings("✌",false);
+//        System.out.println();
+//        Wingdings("✌",false);
+//        System.out.println();
+//        Wingdings("\uD83D\uDC4C",false);
+//        System.out.println();
+//        Wingdings("\uD83D\uDC4D",false);
+//        System.out.println();
+//        Wingdings("\uD83D\uDC4E",false);
+//        System.out.println();
+//        System.out.println();
+//        Wingdings("👌",false);
 
 //        System.out.println("\uD83D");//first char in wingdings "D" prints ?
 //        System.out.println("\uDC4E");//second char in wingdings "D" prints ?
@@ -62,142 +65,142 @@ public class WingdingsTranslator {
             // NOTE: Java will display a longer substring when using emojis but it will be wrongfully placed, so getting a substring is nearly impossible for my beginner mind
             for(int r=0;r<phraseArray.length;r++){
                 int limit=0;
-                for (int i = 0; i < wingdingsArray.length; i++) {
+                for(int i = 0; i < wingdingsArray.length; i++) {
                     if(phraseArray[r]==wingdingsArray[i]){
                         if(newWingdings[i].length()==2){
                             if(newWingdings[i].equals("\uD83D\uDC4C")){
                                 System.out.print("B");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDC4D")){
+                            else if(newWingdings[i].equals("\uDC4D")){
                                 System.out.print("C");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDC4E")){
+                            else if(newWingdings[i].equals("\uDC4E")){
                                 System.out.print("D");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDE10")){
+                            else if(newWingdings[i].equals("\uDE10")){
                                 System.out.print("K");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDCA3")){
+                            else if(newWingdings[i].equals("\uDCA3")){
                                 System.out.print("M");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83C\uDFF1")){
+                            else if(newWingdings[i].equals("\uDFF1")){
                                 System.out.print("P");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDCA7")){
+                            else if(newWingdings[i].equals("\uDCA7")){
                                 System.out.print("S");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDD46")){
+                            else if(newWingdings[i].equals("\uDD46")){
                                 System.out.print("U");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDD48")){
+                            else if(newWingdings[i].equals("\uDD48")){
                                 System.out.print("W");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDCEA")){
+                            else if(newWingdings[i].equals("\uDCEA")){
                                 System.out.print(",");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDCEC")){
+                            else if(newWingdings[i].equals("\uDCEC")){
                                 System.out.print(".");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDDB4")){
+                            else if(newWingdings[i].equals("\uDDB4")){
                                 System.out.print(";");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDD7F")){
+                            else if(newWingdings[i].equals("\uDD7F")){
                                 System.out.print("(");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDCED")){
+                            else if(newWingdings[i].equals("\uDCED")){
                                 System.out.print("/");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDDAC")){
+                            else if(newWingdings[i].equals("\uDDAC")){
                                 System.out.print("=");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDD83")){
+                            else if(newWingdings[i].equals("\uDD83")){
                                 System.out.print("+");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDCEB")){
+                            else if(newWingdings[i].equals("\uDCEB")){
                                 System.out.print("-");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDD82")){
+                            else if(newWingdings[i].equals("\uDD82")){
                                 System.out.print("*");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDD6E")){
+                            else if(newWingdings[i].equals("\uDD6E")){
                                 System.out.print("&");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDD6D")){
+                            else if(newWingdings[i].equals("\uDD6D")){
                                 System.out.print("%");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDC53")){
+                            else if(newWingdings[i].equals("\uDC53")){
                                 System.out.print("$");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDCC2")){
+                            else if(newWingdings[i].equals("\uDCC2")){
                                 System.out.print("1");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDCC4")){
+                            else if(newWingdings[i].equals("\uDCC4")){
                                 System.out.print("2");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDDCF")){
+                            else if(newWingdings[i].equals("\uDDCF")){
                                 System.out.print("3");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDDD0")){
+                            else if(newWingdings[i].equals("\uDDD0")){
                                 System.out.print("4");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDDC4")){
+                            else if(newWingdings[i].equals("\uDDC4")){
                                 System.out.print("5");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDDAE")){
+                            else if(newWingdings[i].equals("\uDDAE")){
                                 System.out.print("7");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDDB0")){
+                            else if(newWingdings[i].equals("\uDDB0")){
                                 System.out.print("8");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDDB2")){
+                            else if(newWingdings[i].equals("\uDDB2")){
                                 System.out.print("9");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDCC1")){
+                            else if(newWingdings[i].equals("\uDCC1")){
                                 System.out.print("0");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDE70")){
+                            else if(newWingdings[i].equals("\uDE70")){
                                 System.out.print("j");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDE75")){
+                            else if(newWingdings[i].equals("\uDE75")){
                                 System.out.print("k");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDDAB")){
+                            else if(newWingdings[i].equals("\uDDAB")){
                                 System.out.print("<");
                                 break;
                             }
-                            else if(newWingdings[i].equals("\uD83D\uDDB3")){
+                            else if(newWingdings[i].equals("\uDDB3")){
                                 System.out.print(":");
                                 break;
                             }
