@@ -49,16 +49,27 @@ public class CodingExercise15 {
     public static void main(String[]args){
         //System.out.println("is 1221 a palindrome..... "+isPalindrome(1221,false));
         //System.out.println(" is 707 a palindrome..... "+isPalindrome(707,false));
-        System.out.println("is -1221 a palindrome..... "+isPalindrome(-1221));
+        //System.out.println("is -1221 a palindrome..... "+isPalindrome(-1221));
+        //System.out.println("is 10 a palindrome..... "+isPalindrome(10));
+        //System.out.println("is 101 a palindrome..... "+isPalindrome(101));
+        //System.out.println("is -222 a palindrome..... "+isPalindrome(-222));
+        //System.out.println("is 11 a palindrome..... "+isPalindrome(11));
     }
     //version 1 error list:
     // numbers like 10 should return false but return true
     public static boolean isPalindrome(int number){
+        if(number<0){
+            number*=-1;
+        }
         int reverseNumber=0;
         int lastDigit;
             int newNumber=number;
             while (newNumber>0){
                 lastDigit=newNumber%10;
+                System.out.println("last digit equals "+lastDigit);
+                if(lastDigit==0 && reverseNumber<=0){
+                    break;
+                }
                 reverseNumber+=lastDigit;
                 System.out.println(reverseNumber);
                 if(reverseNumber==number){
@@ -69,7 +80,6 @@ public class CodingExercise15 {
                 }
                 System.out.println("reverse number is "+reverseNumber);
                 newNumber/=10;
-
             }
             System.out.println(" value of reverse number= "+reverseNumber);
 
