@@ -11,7 +11,8 @@ public class WingdingsTranslator {
         //Wingdings("hola",false);
         //System.out.println(s.toCharArray());
         //System.out.println("\uD83D\uDC4C");
-        Wingdings("✌\uD83D\uDC4C\uD83D\uDC4D\uD83D\uDC4E", false);
+        Wingdings("Poodle",true);
+        //Wingdings("✌\uD83D\uDC4C\uD83D\uDC4D\uD83D\uDC4E", false);
 //        System.out.println();
 //        Wingdings("✌\uD83D\uDC4C\uD83D\uDC4D",false);
 //        System.out.println();
