@@ -76,30 +76,29 @@ public class CodingExercise24 {
                 else if(remaingKilos%5!=0){
                     System.out.print(5);
                     int i=5;
-                    while(i<goal){
+                    while(i!=goal){
                         i+=5;
                     }
+                    //System.out.println("i equals "+i);
                     int newGoal=goal-i;
-                    System.out.println("new goal equals "+newGoal);
+                    //System.out.println("new goal equals "+newGoal);
 //                    i=1;
 //                    while(i<=newGoal){
 //                        i++;
-//                        if((newGoal-i)==0){
-//                            System.out.println("k");
-//                            return true;
-//                        }
-//                        else{
-//                            System.out.println("j");
-//                            continue;
-//                        }
-//                    }
-                    System.out.println("f");
-                    return false;
+                    if(newGoal==0){
+                        System.out.print("k");
+                        return true;
+                    }
+
                 }
                 else{
-                    System.out.print( 6);
+                    System.out.print("f");
                     return false;
                 }
+            }
+            else{
+                System.out.print( 6);
+                return false;
             }
         }
         else if((bigCount*5)<goal){
