@@ -34,24 +34,32 @@ public class CodingExercise24 {
     //
     //NOTE: Do not add a main method to the solution code.
     public static void main(String[]args){
-        System.out.println(canPack(2, 1, 5));
-        System.out.println(canPack(-3, 2,12));
-        System.out.println(canPack(0,5,4));
-        System.out.println(canPack(2, 2, 11));
-        System.out.println(canPack(1,0,5));//ended at 9
-        System.out.println(canPack(1,0,4));
-        System.out.println(canPack(5, 3, 24));
-        System.out.println(canPack(1,0,5));//ended at 9
-        System.out.println(canPack(4, 18, 19));//ended at 5
+//        System.out.println(canPack(2, 1, 5));
+//        System.out.println(canPack(-3, 2,12));
+//        System.out.println(canPack(0,5,4));
+//        System.out.println(canPack(2, 2, 11));
+//        System.out.println(canPack(1,0,5));//ended at 9
+//        System.out.println(canPack(1,0,4));
+//        System.out.println(canPack(5, 3, 24));
+//        System.out.println(canPack(1,0,5));//ended at 9
+//        System.out.println(canPack(4, 18, 19));//ended at 5
+        System.out.println(canPack(1,0,4)+" hello");
     }
     public static boolean canPack(int bigCount,int smallCount,int goal){
         if(bigCount<0 || smallCount<0 || goal<0){
             System.out.print( 0);
             return false;
         }
+         if(((bigCount*5)>goal || (bigCount*5)<goal ) && smallCount==0){
+            System.out.print( 9);
+            return false;
+        }
         if((bigCount*5)+smallCount<goal){
             System.out.print( 1);
             return false;
+        }
+        if((bigCount*5)==goal){
+            return true;
         }
         int remaingKilos=goal-smallCount;
         //else if((bigCount*5)+smallCount>=goal){
@@ -111,10 +119,6 @@ public class CodingExercise24 {
                 System.out.print( 8);
                 return false;
             }
-        }
-        else if((bigCount*5)==goal && smallCount==0){
-            System.out.print( 9);
-            return true;
         }
         System.out.print( 10);
         return false;
