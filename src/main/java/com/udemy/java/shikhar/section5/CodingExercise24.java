@@ -43,14 +43,25 @@ public class CodingExercise24 {
 //        System.out.println(canPack(5, 3, 24));
 //        System.out.println(canPack(1,0,5));//ended at 9
 //        System.out.println(canPack(4, 18, 19));//ended at 5
-        System.out.println(canPack(1,0,4)+" hello");
+//        System.out.println(canPack(1,0,4)+" hello");
+//        System.out.println(canPack(5,3,24)+" namaste");
+        int goal=24;
+        int newGoal=goal;
+        int i=0;
+        while(i<newGoal){
+            i+=5;
+            if(i>newGoal){
+                break;
+            }
+            System.out.println(i);
+        }
     }
     public static boolean canPack(int bigCount,int smallCount,int goal){
         if(bigCount<0 || smallCount<0 || goal<0){
             System.out.print( 0);
             return false;
         }
-         if(((bigCount*5)>goal || (bigCount*5)<goal ) && smallCount==0){
+        if(((bigCount*5)>goal || (bigCount*5)<goal ) && smallCount==0){
             System.out.print( 9);
             return false;
         }
@@ -83,44 +94,53 @@ public class CodingExercise24 {
                 }
                 else if(remaingKilos%5!=0){
                     System.out.print(5);
-                    int i=5;
-                    while(i!=goal){
+                    int newGoal=goal;
+                    int i=0;
+                    while(i<newGoal){
                         i+=5;
+                        System.out.println(i);
                     }
-                    //System.out.println("i equals "+i);
-                    int newGoal=goal-i;
-                    //System.out.println("new goal equals "+newGoal);
-//                    i=1;
-//                    while(i<=newGoal){
-//                        i++;
-                    if(newGoal==0){
-                        System.out.print("k");
-                        return true;
-                    }
-
-                }
-                else{
-                    System.out.print("f");
-                    return false;
                 }
             }
-            else{
-                System.out.print( 6);
-                return false;
-            }
         }
-        else if((bigCount*5)<goal){
-            remaingKilos=goal-(bigCount*5);
-            if(smallCount>=remaingKilos){
-                System.out.print( 7);
-                return true;
-            }
-            else{
-                System.out.print( 8);
-                return false;
-            }
-        }
-        System.out.print( 10);
+//                    int i=5;
+//                    while(i!=goal){
+//                        i+=5;
+//                    }
+//                    //System.out.println("i equals "+i);
+//                    int newGoal=goal-i;
+//                    //System.out.println("new goal equals "+newGoal);
+////                    i=1;
+////                    while(i<=newGoal){
+////                        i++;
+//                    if(newGoal==0){
+//                        System.out.print("k");
+//                        return true;
+//                    }
+//
+//                }
+//                else{
+//                    System.out.print("f");
+//                    return false;
+//                }
+//            }
+//            else{
+//                System.out.print( 6);
+//                return false;
+//            }
+//        }
+//        else if((bigCount*5)<goal){
+//            remaingKilos=goal-(bigCount*5);
+//            if(smallCount>=remaingKilos){
+//                System.out.print( 7);
+//                return true;
+//            }
+//            else{
+//                System.out.print( 8);
+//                return false;
+//            }
+//        }
+//        System.out.print( 10);
         return false;
     }
     // else if(bigCount<(goal/5)){
