@@ -36,46 +36,70 @@ public class CodingExercise25 {
         //////////////////////////////////////////////////////////////
 
         //*start section, gets the factors of a number
-        int number=27;
-        long squareCounter=0;
-        int c=0;
-        long squareRoot=Math.round(Math.sqrt(number));
-        for (int i=1;i<=number;i++){
-            if(number%i==0){
-                c++;
+        //tests
+        // 27 should return 3
+        //25 should return 25
+        //49 should return 7
+        //21 should return 7
+        //100 should return 5
 
-                System.out.println(number/i);
-                squareCounter++;
+        int number=100;
+        long squareRoot=Math.round(Math.sqrt(number));
+        long primeFactor=0;
+        for (int i=1;i<=number;i++){
+            int count=0;
+            if(number%i==0){
+                if(i>(number/i)) {
+                    count=0;
+                    for (int n = 1; n <= 10; n++) {
+                        if (i % n == 0) {
+                            count++;
+                        }
+                    }
+                    System.out.println("i is factor, i equals " + i);
+                }
+                ////////////////////////////////////////////
+                if(i<(number/i)){
+                    count=0;
+                    for (int n=1; n<=10;n++){
+                        if((number/i)%n==0){
+                            count++;
+                        }
+                    }
+                }
             }
-            if(squareCounter==squareRoot){
-                break;
+            if(count==2){
+                primeFactor=(number/i);
             }
         }
-        System.out.println(c);
+        System.out.println("Greatest prime factor is "+primeFactor);
         //* end section
     }
 
-    public static int getLargestPrime(int number) {
-        if (number <= 1) {
-            return -1;
-        } else {
-            int count = 0;
-            for (int k = 1; k <= number; k++) {//checks to see if the number is a prime number
-                if (number % k == 0) {
-                    count++;
-                }
-            }
-            if (count == 2) {
-                return number;
-            }
-
-            /////////////////////////////////////////////////////
-            count = 0;
-
-
-            //Logic:
-            // run a for loop that divides  number by i to print out its factors
-        }
-        return -1;
-    }
+//    public static int getLargestPrime(int number) {
+//        if (number <= 1) {
+//            return -1;
+//        } else {
+//            int count = 0;
+//            for (int k = 1; k <= number; k++) {//checks to see if the number is a prime number
+//                if (number % k == 0) {
+//                    count++;
+//                }
+//            }
+//            if (count == 2) {
+//                return number;
+//            }
+//
+//            /////////////////////////////////////////////////////
+//            count = 0;
+//
+//
+//            //Logic:
+//            // run a for loop that divides  number by i to print out its factors
+//            // test each factor to see if it is a prime number
+//            //each factor will be part
+//            //store the factor that is prime in a variable called primeFactor
+//        }
+//        return -1;
+//    }
 }
