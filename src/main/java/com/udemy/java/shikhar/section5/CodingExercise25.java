@@ -29,10 +29,11 @@ public class CodingExercise25 {
     //
     //NOTE: Do not add a main method to the solution code.
     public static void main(String[] args) {
-//        System.out.println(getLargestPrime(21));//should return 7 but instead returns -1
-//        System.out.println(getLargestPrime(25));//should return 5 but instead returns -1
-//        System.out.println(getLargestPrime(31));//verifies that the loop that checks if number is a prime number works
-//        System.out.println(getLargestPrime(79));
+        System.out.println(getLargestPrime(21));//should return 7 but instead returns -1
+        System.out.println(getLargestPrime(25));//should return 5 but instead returns -1
+        System.out.println(getLargestPrime(31));//verifies that the loop that checks if number is a prime number works
+        System.out.println(getLargestPrime(79));
+        System.out.println(getLargestPrime(923));
         //////////////////////////////////////////////////////////////
 
         //*start section, gets the factors of a number
@@ -42,64 +43,31 @@ public class CodingExercise25 {
         //49 should return 7
         //21 should return 7
         //100 should return 5
-
-        int number=100;
-        long squareRoot=Math.round(Math.sqrt(number));
+    }
+    public static int getLargestPrime(int number){
+        if(number<=1){
+            return -1;
+        }
         long primeFactor=0;
+        long factor;
         for (int i=1;i<=number;i++){
             int count=0;
-            if(number%i==0){
-                if(i>(number/i)) {
-                    count=0;
-                    for (int n = 1; n <= 10; n++) {
-                        if (i % n == 0) {
-                            count++;
-                        }
-                    }
-                    System.out.println("i is factor, i equals " + i);
-                }
-                ////////////////////////////////////////////
-                if(i<(number/i)){
-                    count=0;
-                    for (int n=1; n<=10;n++){
-                        if((number/i)%n==0){
-                            count++;
-                        }
+            if(number%i==0){// checks if i is a factor of number
+                factor=number/i;
+                //System.out.println("factors are "+factor);
+                for(int o=1;o<=factor;o++){
+                    if(factor%o==0){
+                        count++;
                     }
                 }
-            }
-            if(count==2){
-                primeFactor=(number/i);
+                if(count==2){
+                    if(factor>primeFactor) {
+                        primeFactor=factor;
+                    }
+                }
             }
         }
-        System.out.println("Greatest prime factor is "+primeFactor);
-        //* end section
+        //System.out.println(primeFactor);
+        return (int)(primeFactor);
     }
-
-//    public static int getLargestPrime(int number) {
-//        if (number <= 1) {
-//            return -1;
-//        } else {
-//            int count = 0;
-//            for (int k = 1; k <= number; k++) {//checks to see if the number is a prime number
-//                if (number % k == 0) {
-//                    count++;
-//                }
-//            }
-//            if (count == 2) {
-//                return number;
-//            }
-//
-//            /////////////////////////////////////////////////////
-//            count = 0;
-//
-//
-//            //Logic:
-//            // run a for loop that divides  number by i to print out its factors
-//            // test each factor to see if it is a prime number
-//            //each factor will be part
-//            //store the factor that is prime in a variable called primeFactor
-//        }
-//        return -1;
-//    }
 }
