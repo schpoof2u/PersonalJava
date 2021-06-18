@@ -77,10 +77,11 @@ public class CodingExercise26 {
             System.out.println("Invalid Value");
         }
         else{
-            int rowCount=0;
-            for(int r=0;r<=number;r++){//is used for the collum
-                for(int c=0;c<=number;c++){//is used for row
-                    if(r==0 || r==number || c==0 || c==number || r==c || c==(rowCount-r)+1){
+            //int rowCount=0;
+            for(int r=0;r<number;r++){//is used for the collum
+                for(int c=0;c<number;c++){//is used for row
+                    if(r==0  || c==0 || r==c || c==(number-r)+1 || c==number-1 || r==number-1) {
+                        //(r==0 || c==0 || r==c || c==number-r-1 || c==number-1 || r==number-1)
                         System.out.print("*");
                     }
                     else{
