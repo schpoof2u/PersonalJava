@@ -10,9 +10,9 @@ public class Triangle2 {
             System.out.println("Number is invalid");
         }
         else{
-            for(int i=0; i<=number;i++){
-                for(int j=0; j<=i;j++){
-                    for(int s=0;s<=number-i;s++){
+            for(int i=0; i<number;i++){
+                for(int j=0; j<i;j++){
+                    for(int s=number;s>=number-i;s--){
                         System.out.print(" ");
                     }
                     System.out.print("*");
