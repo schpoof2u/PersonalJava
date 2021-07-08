@@ -4,6 +4,8 @@ public class Triangle2 {
     public static void main(String[]args){
         Triangle(9);
         Triangle(5);
+        Triangle(3);
+        Triangle(4);
     }
     public static void Triangle(int number){
         if(number%2==0){
@@ -12,7 +14,7 @@ public class Triangle2 {
         else{
             for(int i=0; i<number;i++){
                 for(int j=0; j<i;j++){
-                    for(int s=number;s>=number-i;s--){
+                    for(int s=0;s<=number-j;s++){
                         System.out.print(" ");
                     }
                     System.out.print("*");
