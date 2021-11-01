@@ -10,7 +10,6 @@ public class SimpleCalculator {
     public void setSecondNumber(double secondNumber){
         this.secondNumber=secondNumber;
     }
-
     public double getFirstNumber(){
         return firstNumber;
     }
@@ -20,7 +19,8 @@ public class SimpleCalculator {
     public double getAdditionResult(){
         return (firstNumber+secondNumber);
     }
-    public double getSubtractionResult(){
+    public double getSubtractionResult()
+    {
         return (secondNumber-firstNumber);
     }
     public double getMultiplicationResult(){
