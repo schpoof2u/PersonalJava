@@ -2,9 +2,9 @@ package com.udemy.java.shikhar.section6;
 
 public class Lecture3 {
     public static void main(String[]args){
-        //uses the class named Animal
-        Animal animal= new Animal("Animal",1,1,5,255);
-        Dog dog= new Dog("Husky",5,300,2,4,1,10,"Thick");
-        dog.eat();
+        Animal animal=new Animal(1,5,1,1,"Animal");
+        Dog husky=new Dog(7,110,"Husky",1,2,4,"Thick");
+        husky.eat();
+        husky.walk();
     }
 }
