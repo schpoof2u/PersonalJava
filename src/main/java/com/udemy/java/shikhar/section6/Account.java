@@ -2,21 +2,18 @@ package com.udemy.java.shikhar.section6;
 import java.util.Scanner;
 public class Account {
     private int accountNumber;
-    private int balance;
+    private double balance;
     private String name;
     private String email;
     private int phoneNumber;
     Scanner scanner= new Scanner(System.in);
     public void setAccountNumber(int accountNumber){
-        accountNumber=this.accountNumber;
-    }
-    public void setBalance(int balance){
-        balance=this.balance;
+        this.accountNumber=accountNumber;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setBalance(double balance) {this.balance = balance;}
+
+    public void setName(String name) {this.name=name;}
 
     public void setEmail(String email) {
         this.email = email;
@@ -28,7 +25,7 @@ public class Account {
     public int getAccountNumber(){
         return accountNumber;
     }
-    public int getBalance(){
+    public double getBalance(){
         return balance;
     }
 
@@ -45,19 +42,26 @@ public class Account {
     }
     public void withdrawal(){
         System.out.println("How much would you like to withdraw?");
-        System.out.println("Type STOP to exit");
-        String amount = scanner.nextLine();
-        if(amount.equals("STOP")){
-            System.out.println("the balance is "+getBalance());
-        }
-        else if(Integer.parseInt(amount)>getBalance()){
-            System.out.println("the amount is in valid");
-            System.out.println("the balance is "+getBalance());
+        double amount = scanner.nextDouble();
+        if(amount>balance){
+            System.out.println("the amount is invalid");
+            System.out.println("the balance is "+balance);
         }
         else{
-            int newBalance=getBalance()-Integer.parseInt(amount);
-            setBalance(newBalance);
-            System.out.println("the balance is "+getBalance());  
+            balance-=amount;
+            System.out.println("the balance is "+balance);
+        }
+    }
+    public void deposit(){
+        System.out.println("How much would you like to deposit?");
+        double amount = scanner.nextDouble();
+        if(amount<0){
+            System.out.println("the amount is in valid");
+            System.out.println("the balance is "+balance);
+        }
+        else{
+            balance+=amount;
+            System.out.println("the balance is "+balance);
         }
     }
 }

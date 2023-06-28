@@ -18,4 +18,10 @@ public class Lecture2 {
     * the class must be encapsulated
     *
     * */
+    public static void main(String[]args){
+        Account account = new Account();
+        account.setBalance(10000.89);
+        account.withdrawal();
+        account.deposit();
+    }
 }
